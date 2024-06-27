@@ -1,12 +1,13 @@
 import React from "react";
 import { FaLinkedinIn } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
     <div className="text-white bg-black pt-10 ">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
         <div>
-          <img src="/logo.jpg" alt="logo" className="w-40 mx-4 my-2" />
+        <Link to="/"><img src="/logo.jpg" alt="logo" className="w-40 mx-4 my-2" /></Link>
           <p className="w-[90%] mx-auto">
             Collection Experiences,Augmented by Conversational AI
           </p>
