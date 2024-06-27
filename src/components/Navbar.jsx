@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import NavDrawer from "./NavDrawer";
 import { Link } from "react-router-dom";
+import { Menu, MenuButton, MenuList, Box } from "@chakra-ui/react";
 
 function Navbar() {
   const [isFixed, setIsFixed] = useState(false);
@@ -19,6 +20,16 @@ function Navbar() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsOpen(false);
+  };
   return (
     <div
       className={`${
@@ -27,15 +38,29 @@ function Navbar() {
     >
       {/* navbar for large screen */}
       <div className="hidden lg:block">
-        <div className="bg-black py-3 px-20 grid grid-cols-2">
+        <div className="bg-black py-4 px-5 grid grid-cols-2">
           <div>
             <Link to="/">
               {" "}
               <img src="/logo.jpg" alt="logo" className="w-48" />
             </Link>
           </div>
-          <div className="text-white grid grid-cols-5 items-center">
-            <p>Product</p>
+          <div className="text-white grid grid-cols-5 gap-3 items-center">
+            <Menu isOpen={isOpen} onClose={() => setIsOpen(false)}>
+              <div
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              >
+                <MenuButton as={Box} p="2" borderRadius="md">
+                  <p>Product</p>
+                </MenuButton>
+                <MenuList bg="black" border={"black"}>
+                  <div className="-my-7 py-10 px-2">
+                  <p className="hover:text-green-600"> <Link to='/simpliAssist'>SimpliAssist</Link></p>
+                  </div>
+                </MenuList>
+              </div>
+            </Menu>
             <p>Solutions</p>
             <p>Resources</p>
             <p>Company</p>
@@ -48,7 +73,7 @@ function Navbar() {
 
       {/* Small screen */}
       <div className="lg:hidden">
-        <div className="bg-black py-2 px-3 flex justify-between items-center flex-wrap">
+        <div className="bg-black py-4 px-3 flex justify-between items-center flex-wrap">
           <div>
             <Link to="/">
               <img
@@ -59,7 +84,7 @@ function Navbar() {
             </Link>
           </div>
           <div className="text-right flex">
-            <button className="bg-green-500 rounded-lg px-4 py-1 mx-5 text-white font-bold">
+            <button className="bg-green-500 rounded-lg sm:px-4 px-2 py-1 sm:mx-5 text-white font-bold">
               <Link to="/bookDemo">Book Demo</Link>
             </button>
             <NavDrawer />

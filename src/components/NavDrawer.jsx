@@ -25,7 +25,7 @@ function NavDrawer() {
   return (
     <div>
       <Button ref={btnRef} colorScheme="black" onClick={onOpen}>
-        <RxHamburgerMenu className="text-white inline font-bold text-3xl" />
+        <RxHamburgerMenu className="text-white inline font-bold sm:text-3xl text-2xl" />
       </Button>
       <Drawer
         isOpen={isOpen}
@@ -104,7 +104,7 @@ function NavDrawer() {
                   </AccordionButton>
                 </h2>
                 <AccordionPanel pb={4} className="text-slate-400">
-                  <p>About Us</p>
+                  <p><Link to='/aboutUs'>About Us</Link></p>
                   <p className="my-2">Newsroom</p>
                   <p>Careers</p>
                   <p className="mt-2">Diversity</p>
