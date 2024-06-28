@@ -42,7 +42,7 @@ function Navbar() {
           <div>
             <Link to="/">
               {" "}
-              <img src="/logo.jpg" alt="logo" className="w-48" />
+              <img src="/logo.jpg" alt="logo" className="w-48 hover:w-40" />
             </Link>
           </div>
           <div className="text-white grid grid-cols-5 gap-3 items-center">
@@ -51,7 +51,7 @@ function Navbar() {
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
               >
-                <MenuButton as={Box} p="2" borderRadius="md">
+                <MenuButton as={Box} p="2" borderRadius="md" className="hover:underline hover:underline-offset-8 hover:text-green-600 hover:decoration-red-700">
                   <p>Product</p>
                 </MenuButton>
                 <MenuList bg="black" border={"black"}>
@@ -61,10 +61,10 @@ function Navbar() {
                 </MenuList>
               </div>
             </Menu>
-            <p>Solutions</p>
+            <p className="hover:underline">Solutions</p>
             <p>Resources</p>
             <p>Company</p>
-            <button className="bg-green-500 rounded-lg font-bold py-1">
+            <button className="bg-green-500 rounded-lg font-bold py-1 hover:text-blue-900">
               <Link to="/BookDemo">Book Demo</Link>
             </button>
           </div>
@@ -79,12 +79,12 @@ function Navbar() {
               <img
                 src="/logo.jpg"
                 alt="logo"
-                className="sm:w-48 w-24 text-center"
+                className="sm:w-44 hover:w-40 w-24 text-center"
               />
             </Link>
           </div>
           <div className="text-right flex">
-            <button className="bg-green-500 rounded-lg sm:px-4 px-2 py-1 sm:mx-5 text-white font-bold">
+            <button className="bg-green-500 rounded-lg sm:px-4 px-2 py-1 sm:mx-5 text-white font-bold hover:text-blue-900">
               <Link to="/bookDemo">Book Demo</Link>
             </button>
             <NavDrawer />
