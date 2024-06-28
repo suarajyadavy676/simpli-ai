@@ -5,6 +5,7 @@ import SimpliAssist from "../routes/SimpliAssist";
 import BookDemo from "../routes/BookDemo";
 import AboutUs from "../routes/AboutUs";
 import ScrollToTop from "./ScrollToTop";
+import ScrollToTopButton from "./ScrollToTopButton";
 
 function AllRoutes() {
   return (
@@ -16,6 +17,7 @@ function AllRoutes() {
           <Route path="/BookDemo" element={<BookDemo />} />
           <Route path="/aboutUs" element={<AboutUs />} />
         </Routes>
+        <ScrollToTopButton/>
     </div>
   );
 }
