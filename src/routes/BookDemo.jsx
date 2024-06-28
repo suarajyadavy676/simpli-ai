@@ -3,8 +3,8 @@ import React from "react";
 function BookDemo() {
   return (
     <div>
-      <div className="text-center py-32 text-2xl bg-blue-300 text-white">
-        <p className="">
+      <div className="text-center py-40 text-2xl bg-blue-300 text-white">
+        <p className="my-4">
           Please email us to{" "}
           <a href="mailto:getinspired@simpli-ai.com" className="hover:text-red-700 text-slate-500">
             getinspired@simpli-ai.com
