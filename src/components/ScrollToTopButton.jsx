@@ -5,7 +5,7 @@ const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => {
-    if (window.pageYOffset > 300) {
+    if (window.pageYOffset > 50) {
       setIsVisible(true);
     } else {
       setIsVisible(false);
@@ -27,13 +27,13 @@ const ScrollToTopButton = () => {
   }, []);
 
   return (
-    <div className="fixed bottom-1/2 right-4">
+    <div className="fixed bottom-4 right-4 z-50">
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="p-3 bg-slate-400 text-red-700 rounded-full shadow-md hover:bg-blue-700 transition duration-300 ease-in-out"
+          className="p-3 bg-slate-400 text-black rounded-full shadow-md hover:bg-blue-300 transition duration-300 ease-in-out opacity-50"
         >
-         <MdKeyboardDoubleArrowUp className='text-2xl'/>
+         <MdKeyboardDoubleArrowUp className='text-2xl hover:text-black'/>
         </button>
       )}
     </div>

@@ -9,7 +9,7 @@ import ScrollToTopButton from "./ScrollToTopButton";
 
 function AllRoutes() {
   return (
-    <div>     
+    <div className="relative">     
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<HomeBody />} />
