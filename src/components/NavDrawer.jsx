@@ -43,14 +43,22 @@ function NavDrawer() {
               <AccordionItem border={"none"}>
                 <h2>
                   <AccordionButton>
-                    <Box as="span" flex="1" textAlign="left">
+                    <Box
+                      as="span"
+                      flex="1"
+                      textAlign="left"
+                      className="hover:text-green-600"
+                    >
                       <p className="font-bold">Product</p>
                     </Box>
                     <AccordionIcon />
                   </AccordionButton>
                 </h2>
                 <AccordionPanel pb={4} className="text-slate-400">
-                  <p> <Link to="/simpliAssist">SimpliAssist</Link></p>
+                  <p className="hover:text-green-500">
+                    {" "}
+                    <Link to="/simpliAssist">SimpliAssist</Link>
+                  </p>
                 </AccordionPanel>
               </AccordionItem>
             </Accordion>
@@ -59,17 +67,30 @@ function NavDrawer() {
               <AccordionItem border={"none"}>
                 <h2>
                   <AccordionButton>
-                    <Box as="span" flex="1" textAlign="left">
+                    <Box
+                      as="span"
+                      flex="1"
+                      textAlign="left"
+                      className="hover:text-green-600"
+                    >
                       <p className="font-bold">Solutions</p>
                     </Box>
                     <AccordionIcon />
                   </AccordionButton>
                 </h2>
                 <AccordionPanel pb={4} className="text-slate-400">
-                  <p>Collections</p>
-                  <p className="my-2">Enterprise</p>
-                  <p>Call Center</p>
-                  <p className="mt-2">Multichanne</p>
+                  <p className="hover:text-green-600">
+                    <Link to="#">Collections</Link>
+                  </p>
+                  <p className="my-2 hover:text-green-600">
+                    <Link to="#">Enterprise</Link>
+                  </p>
+                  <p className="hover:text-green-600">
+                    <Link to="#">Call Center</Link>
+                  </p>
+                  <p className="mt-2 hover:text-green-600">
+                    <Link to="#">Multichannel</Link>
+                  </p>
                 </AccordionPanel>
               </AccordionItem>
             </Accordion>
@@ -78,17 +99,30 @@ function NavDrawer() {
               <AccordionItem border={"none"}>
                 <h2>
                   <AccordionButton>
-                    <Box as="span" flex="1" textAlign="left">
+                    <Box
+                      as="span"
+                      flex="1"
+                      textAlign="left"
+                      className="hover:text-green-600"
+                    >
                       <p className="font-bold">Resources</p>
                     </Box>
                     <AccordionIcon />
                   </AccordionButton>
                 </h2>
                 <AccordionPanel pb={4} className="text-slate-400">
-                  <p>Collections</p>
-                  <p className="my-2">Enterprise</p>
-                  <p>Call Center</p>
-                  <p className="mt-2">Multichanne</p>
+                  <p className="hover:text-green-600">
+                    <Link to="#">Collections</Link>
+                  </p>
+                  <p className="my-2 hover:text-green-600">
+                    <Link to="#">Enterprise</Link>
+                  </p>
+                  <p className="hover:text-green-600">
+                    <Link to="#">Call Center</Link>
+                  </p>
+                  <p className="mt-2 hover:text-green-600">
+                    <Link to="#">Multichannel</Link>
+                  </p>
                 </AccordionPanel>
               </AccordionItem>
             </Accordion>
@@ -97,17 +131,30 @@ function NavDrawer() {
               <AccordionItem border={"none"}>
                 <h2>
                   <AccordionButton>
-                    <Box as="span" flex="1" textAlign="left">
+                    <Box
+                      as="span"
+                      flex="1"
+                      textAlign="left"
+                      className="hover:text-green-600"
+                    >
                       <p className="font-bold">Company</p>
                     </Box>
                     <AccordionIcon />
                   </AccordionButton>
                 </h2>
                 <AccordionPanel pb={4} className="text-slate-400">
-                  <p><Link to='/aboutUs'>About Us</Link></p>
-                  <p className="my-2">Newsroom</p>
-                  <p>Careers</p>
-                  <p className="mt-2">Diversity</p>
+                  <p className="hover:text-green-600">
+                    <Link to="/aboutUs">About Us</Link>
+                  </p>
+                  <p className="my-2 hover:text-green-600">
+                    <Link to="#">Newsroom</Link>
+                  </p>
+                  <p className="hover:text-green-600">
+                    <Link to="#">Careers</Link>
+                  </p>
+                  <p className="mt-2 hover:text-green-600">
+                    <Link to="#">Diversity</Link>
+                  </p>
                 </AccordionPanel>
               </AccordionItem>
             </Accordion>

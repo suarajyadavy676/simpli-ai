@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function Footer() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
-    <div className="text-white bg-black pt-10 ">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+    <div className="text-white bg-black pt-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10" data-aos="zoom-in">
         <div>
         <Link to="/"><img src="/logo.jpg" alt="logo" className="w-48 hover:w-40 mx-4 my-2" /></Link>
           <p className="w-[90%] mx-auto">

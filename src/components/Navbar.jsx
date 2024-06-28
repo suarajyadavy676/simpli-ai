@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import NavDrawer from "./NavDrawer";
 import { Link } from "react-router-dom";
 import { Menu, MenuButton, MenuList, Box } from "@chakra-ui/react";
+import Product from "./Product";
+import Company from "./Company";
+import Solutions from "./Solutions";
 
 function Navbar() {
   const [isFixed, setIsFixed] = useState(false);
@@ -20,16 +23,6 @@ function Navbar() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  const [isOpen, setIsOpen] = useState(false);
-
-  const handleMouseEnter = () => {
-    setIsOpen(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsOpen(false);
-  };
   return (
     <div
       className={`${
@@ -46,24 +39,14 @@ function Navbar() {
             </Link>
           </div>
           <div className="text-white grid grid-cols-5 gap-3 items-center">
-            <Menu isOpen={isOpen} onClose={() => setIsOpen(false)}>
-              <div
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-              >
-                <MenuButton as={Box} p="2" borderRadius="md" className="hover:underline hover:underline-offset-8 hover:text-green-600 hover:decoration-red-700">
-                  <p>Product</p>
-                </MenuButton>
-                <MenuList bg="black" border={"black"}>
-                  <div className="-my-7 py-10 px-2">
-                  <p className="hover:text-green-600"> <Link to='/simpliAssist'>SimpliAssist</Link></p>
-                  </div>
-                </MenuList>
-              </div>
-            </Menu>
-            <p className="hover:underline">Solutions</p>
-            <p>Resources</p>
-            <p>Company</p>
+          {/* Product */}
+           <Product/>
+           {/* Solutions */}
+            <Solutions/>
+            {/* Resources */}
+            <p className="hover:underline hover:underline-offset-8 hover:text-green-600 hover:decoration-red-700"><Link to="#">Resources</Link></p>
+            {/* Company */}
+            <Company/>
             <button className="bg-green-500 rounded-lg font-bold py-1 hover:text-blue-900">
               <Link to="/BookDemo">Book Demo</Link>
             </button>
