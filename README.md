@@ -8,7 +8,12 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 
-// routes
+## routes
 1. https://simpli-ai.netlify.app/simpliAssist
 2. https://simpli-ai.netlify.app/BookDemo
 3. https://simpli-ai.netlify.app/aboutUs
+
+## Installation
+
+1. Clone the repository:
+   git clone url
